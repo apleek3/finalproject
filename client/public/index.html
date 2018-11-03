@@ -12,7 +12,7 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <link rel="stylesheet" type="text/css" href="../public/css/dnd.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
@@ -74,7 +74,7 @@
                         <div class="well">
                             <p>Canvas</p>
                             <div>
-                                <!-- Add sizeable canvas code here. -->
+                                <div id="container"></div>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,26 @@
 
         </div>
     </div>
-    
+
+    <div class="controls">
+            <ul>
+                <li class="controlsTitle">Options</li>
+                <li>
+                    <label><input type="checkbox" name="snap" id="snap" value="1" /> Snap end position to grid</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="liveSnap" id="liveSnap" value="1" /> Live snap</label>
+                </li>
+            </ul>
+        </div>
+        <div id="buttons"></div>
+        <div id="letter"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/utils/Draggable.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="greensock-js-shockingly-green/src/uncompressed/plugins/ThrowPropsPlugin.js"></script>
+        <script type="text/javascript" src="../public/js/dnd.js"></script>
     <footer class="container-fluid text-center">
         <p>Copyright © 2018 by <a href="https://github.com/apleek3/finalproject">These Guys</a>.</p>
     </footer>
