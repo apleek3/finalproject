@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 export default {
   // Gets all Users
   getUser: function() {
@@ -18,3 +19,4 @@ export default {
     return axios.post("/api/users", userData);
   }
 };
+
