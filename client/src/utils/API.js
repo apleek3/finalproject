@@ -1,20 +1,22 @@
 import axios from "axios";
 
-//abstracted API methods
+
 export default {
-  getArticles: function() {
-    return axios.get("/api/articles");
+  // Gets all Users
+  getUser: function() {
+    return axios.get("/api/users");
   },
-  getArticle: function(id) {
-    return axios.get("/api/articles/" + id);
+  // Gets the user with the given id
+  getUser: function(id) {
+    return axios.get("/api/users/" + id);
   },
-  deleteArticle: function(id) {
-    return axios.delete("/api/articles/" + id);
+  // Deletes the user with the given id
+  deleteUser: function(id) {
+    return axios.delete("/api/users/" + id);
   },
-  saveArticle: function(articleData) {
-    return axios.post("/api/articles", articleData);
-  },
-  queryNYT: function (queryUrl) {
-    return axios.get(queryUrl);
+  // Saves a user to the database
+  saveUser: function(userData) {
+    return axios.post("/api/users", userData);
   }
 };
+
