@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 ./client/node_modules
+## exceptions
+!/node_modules/react-piano
+!./client/node_modules/react-piano
 
 # testing
 /coverage
