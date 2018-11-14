@@ -68,7 +68,7 @@ $(document).ready(function() {
     lineHeight: gridHeight + "px"
   });
 
-  console.clear(); //Clear the Console on start of the page
+  // console.clear(); //Clear the Console on start of the page
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////HUE/////////////////////////////////////////////////////////////////
@@ -86,9 +86,14 @@ $(document).ready(function() {
         ease: Linear.easeNone,
         delay: 0.4
       });
+      TweenLite.to(".ReactPiano__Key--natural", 0, {
+        backgroundColor: "hsl(+=" + hue + ", +=0%, +=0%)",
+        ease: Linear.easeNone,
+        delay: 0.4
+      });   
     },
   });
-  //This is the button that logs the angle value of the knob turns. This data can be used for the user later to get a general sense of what color turns work best for them
+  //This is the button that logs the angle value of the knob turns. This data can be used for the person later to get a general sense of what color turns work best for them
   $("#Hue").click(function() {
     console.log(
       document.getElementById("hueKnob")._gsTransform.rotation,
@@ -112,9 +117,14 @@ Draggable.create("#saturationKnob", {
       ease: Linear.easeNone,
       delay: 0.0
     });
+    TweenLite.to(".ReactPiano__Key--natural", 0, {
+      backgroundColor: "hsl(+=0%, +=" + this.rotation/100 + ", +=0%)",
+      ease: Linear.easeNone,
+      delay: 0.4
+    });   
   }
 });
-//This is the button that logs the angle value of the knob turns. This data can be used for the user later to get a general sense of what color turns work best for them
+//This is the button that logs the angle value of the knob turns. This data can be used for the person later to get a general sense of what color turns work best for them
 $("#Saturation").click(function() {
   console.log(
     document.getElementById("saturationKnob")._gsTransform.rotation,
@@ -138,10 +148,15 @@ Draggable.create("#lightnessKnob", {
       ease: Linear.easeNone,
       delay: 0.0
     });
+    TweenLite.to(".ReactPiano__Key--natural", 0, {
+      backgroundColor: "hsl(+=0%, +=0%, +=" + this.rotation/10 + ")",
+      ease: Linear.easeNone,
+      delay: 0.4
+    });   
   },
   
 });
-//This is the button that logs the angle value of the knob turns. This data can be used for the user later to get a general sense of what color turns work best for them
+//This is the button that logs the angle value of the knob turns. This data can be used for the person later to get a general sense of what color turns work best for them
 $("#Lightness").click(function() {
   console.log(
     document.getElementById("lightnessKnob")._gsTransform.rotation,
@@ -179,7 +194,7 @@ $("#Lightness").click(function() {
     });
   } //end of update function
 
-  //when the user toggles one of the "snap" modes, make the necessary updates...
+  //when the person toggles one of the "snap" modes, make the necessary updates...
   $snap.on("change", applySnap);
   $liveSnap.on("change", applySnap);
 
@@ -245,22 +260,22 @@ $("#Lightness").click(function() {
     // Again you can see we use that find, and once its found we append the item
     $("#letterContainer").append(fridgeMagnet);
 
-    //when the user toggles one of the "snap" modes, make the necessary updates...
-    $snap.on("change", applySnap);
-    $liveSnap.on("change", applySnap);
+    //when the person toggles one of the "snap" modes, make the necessary updates...
+    // $snap.on("change", applySnap);
+    // $liveSnap.on("change", applySnap);
 
-    function applySnap() {
-      if ($snap.prop("checked") || $liveSnap.prop("checked")) {
-        $(".box").each(function(index, element) {
-          TweenLite.to(element, 0.5, {
-            x: Math.round(element._gsTransform.x / gridWidth) * gridWidth,
-            y: Math.round(element._gsTransform.y / gridHeight) * gridHeight,
-            delay: 0.1,
-            ease: Power2.easeInOut
-          });
-        });
-      }
-    }
+    // function applySnap() {
+    //   if ($snap.prop("checked") || $liveSnap.prop("checked")) {
+    //     $(".box").each(function(index, element) {
+    //       TweenLite.to(element, 0.5, {
+    //         x: Math.round(element._gsTransform.x / gridWidth) * gridWidth,
+    //         y: Math.round(element._gsTransform.y / gridHeight) * gridHeight,
+    //         delay: 0.1,
+    //         ease: Power2.easeInOut
+    //       });
+    //     });
+    //   }
+    // }
     update();
   });
   update();

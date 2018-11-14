@@ -81,7 +81,7 @@ $("#rotation").click(function() {
   console.log(Draggable.get("#knob").rotation, "from Draggable.get()");
 });
 
-//when the user toggles one of the "snap" modes, make the necessary updates...
+//when the person toggles one of the "snap" modes, make the necessary updates...
 $snap.on("change", applySnap);
 $liveSnap.on("change", applySnap);
 
