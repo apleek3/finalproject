@@ -191,7 +191,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 							}
 							if (curProp.max !== undefined && end > Number(curProp.max) + _min) {
 								unitFactor = curProp.unitFactor || ThrowPropsPlugin.defaultUnitFactors[p] || 1; //some values are measured in special units like radians in which case our thresholds need to be adjusted accordingly.
-								//if the value is already exceeding the max or the velocity is too low, the duration can end up being uncomfortably long but in most situations, users want the snapping to occur relatively quickly (0.75 seconds), so we implement a cap here to make things more intuitive. If the max and min match, it means we're animating to a particular value and we don't want to shorten the time unless the velocity is really slow. Example: a rotation where the start and natural end value are less than the snapping spot, but the natural end is pretty close to the snap.
+								//if the value is already exceeding the max or the velocity is too low, the duration can end up being uncomfortably long but in most situations, persons want the snapping to occur relatively quickly (0.75 seconds), so we implement a cap here to make things more intuitive. If the max and min match, it means we're animating to a particular value and we don't want to shorten the time unless the velocity is really slow. Example: a rotation where the start and natural end value are less than the snapping spot, but the natural end is pretty close to the snap.
 								curClippedDuration = ((curVal > curProp.max && curProp.min !== curProp.max) || (curVelocity * unitFactor > -15 && curVelocity * unitFactor < 45)) ? (minDuration + (maxDuration - minDuration) * 0.1) : _calculateDuration(curVal, curProp.max, curVelocity, ease, checkpoint);
 								if (curClippedDuration + overshootTolerance < clippedDuration) {
 									clippedDuration = curClippedDuration + overshootTolerance;
@@ -199,7 +199,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 
 							} else if (curProp.min !== undefined && end < Number(curProp.min) - _min) {
 								unitFactor = curProp.unitFactor || ThrowPropsPlugin.defaultUnitFactors[p] || 1; //some values are measured in special units like radians in which case our thresholds need to be adjusted accordingly.
-								//if the value is already exceeding the min or if the velocity is too low, the duration can end up being uncomfortably long but in most situations, users want the snapping to occur relatively quickly (0.75 seconds), so we implement a cap here to make things more intuitive.
+								//if the value is already exceeding the min or if the velocity is too low, the duration can end up being uncomfortably long but in most situations, persons want the snapping to occur relatively quickly (0.75 seconds), so we implement a cap here to make things more intuitive.
 								curClippedDuration = ((curVal < curProp.min && curProp.min !== curProp.max) || (curVelocity * unitFactor > -45 && curVelocity * unitFactor < 15)) ? (minDuration + (maxDuration - minDuration) * 0.1) : _calculateDuration(curVal, curProp.min, curVelocity, ease, checkpoint);
 								if (curClippedDuration + overshootTolerance < clippedDuration) {
 									clippedDuration = curClippedDuration + overshootTolerance;

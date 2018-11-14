@@ -1,11 +1,12 @@
 .jumbotron {
-    background-image: url(./images/banner.jpg);
-    background-position: 0% 25%;
+    background-image: url(./images/Synesthesia1.png);
+    background-position: 0% 50%;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     margin-bottom: 0px;
     text-shadow: black 0.3em 0.3em 0.3em;
+    height: 90vh;
 }
 
 .PianoDarkTheme .ReactPiano__Key--accidental {
