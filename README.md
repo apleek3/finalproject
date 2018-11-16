@@ -1,4 +1,4 @@
-# Synesthesia
+# Synthro
 ## Overview
 Heroku deployed app created to show empathy and improve our skills as Web Developers: 
 
