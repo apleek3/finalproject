@@ -99,19 +99,19 @@ body {
   padding-right: 10px;
 }
 
-#hueKnob {
+.hueKnob {
   max-width: 100px;
   max-height: 100px;
   margin: 10px 10px;
 }
 
-#saturationKnob {
+.saturationKnob {
   max-width: 100px;
   max-height: 100px;
   margin: 10px 10px;
 }
 
-#lightnessKnob {
+.lightnessKnob {
   max-width: 100px;
   max-height: 100px;
   margin: 10px 10px;
@@ -151,6 +151,9 @@ body {
   max-width: 10vw;
 } */
 
+/* #pageKnobs {
+  width: 100%;
+} */
 /* 
 @media (max-width: 575.98px) { 
   .affix-right {

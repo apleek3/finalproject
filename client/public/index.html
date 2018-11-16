@@ -8,8 +8,6 @@
     <meta content="Project 3" />
     <title>Synesthesia</title>
 
-    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
-    <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" /> -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -32,179 +30,103 @@
   <body>
     <div class="jumbotron" back>
       <div class="container-fluid">
-      <h1 text="center">
-        <img
-          src="./images/fancyS.png"
-          height="10%"
-          width="10%"
-          alt="Synesthesia"
-          id="titleSynth"
-        />ynesthesia
-      </h1>
-      <!-- Other Possible Titles: -->
-      <!-- Sonic Rainbow -->
-      <!-- Play the Blues -->
-      <!-- Could use alternate blue-styled piano to make this pun work. -->
-      <!-- The Sound and the Fuchsia -->
-      <!-- Get it?...guys?...do you get it? -->
-      <!-- Other Suggestions??? -->
-      <p>"I see my life in terms of music.” ―Albert Einstein</p>
-    </div>
-      <!--
-        Other possible quotes about music/art (Was specifically looking for quotes that includes something about sight & sound):
-      -->
-      <!--
-        “A painter paints pictures on canvas. But musicians paint their pictures on silence.” ―Leopold Stokowski
-      -->
-      <!--
-        "A man paints with his brains and not with his hands." ―Michelangelo
-      -->
-      <!-- Other Suggestions??? -->
-      <div class="container-fluid" id="knobs">
-        <ul class="container-fluid nav navbar-nav">
-          <li class="container-fluid">
-            <img
-              id="hueKnob"
-              class="img-fluid"
-              src="./images/hueKnob.png"
-              alt="dial that changes hue"
-            />
-            <!-- <button id="Hue">console.log() Hue</button><br /> -->
-          </li>
-
-          <li class="container-fluid">
-            <img
-              id="saturationKnob"
-              class="img-fluid"
-              src="./images/saturationKnob.png"
-              alt="dial that changes saturation"
-            />
-            <!--
-              <button id="Saturation">console.log() Saturation</button><br />
-            -->
-          </li>
-
-          <li class="container-fluid">
-            <img
-              id="lightnessKnob"
-              class="img-fluid"
-              src="./images/lightnessKnob.png"
-              alt="dial that changes lightness"
-            />
-            <!--
-              <button id="Lightness">console.log() Lightness</button><br />
-            -->
-          </li>
-        </ul>
+        <h1 text="center">
+          <img src="./img/fancyS.png" height="10%" width="10%" alt="Synesthesia" id="titleSynth"/>ynesthesia
+        </h1>
+        <p>"I see my life in terms of music.” ―Albert Einstein</p>
       </div>
+
+      <div class="container-fluid" id="knobs">
+            <img class="img-fluid hueKnob" src="./img/hueKnob.png" alt="dial that changes hue"/>
+            <!-- <button id="Hue">console.log() Hue</button><br /> -->
+            <img class="img-fluid saturationKnob" src="./img/saturationKnob.png"  alt="dial that changes saturation"/>
+            <!-- <button id="Saturation">console.log() Saturation</button><br /> -->
+            <img class="img-fluid lightnessKnob" src="./img/lightnessKnob.png" alt="dial that changes lightness"/>
+            <!-- <button id="Lightness">console.log() Lightness</button><br /> -->
+      </div>
+
     </div>
 
     <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="500">
-      <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="500">
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="./index.html">Home</a>
           </div>
           <ul class="nav navbar-nav">
-            <li><a href="#canvas">Canvas</a></li>
+            <li><a href="#music">Sheet Music</a></li>
             <li><a href="#piano">Piano</a></li>
             <li><a href="#magnets">Magnets</a></li>
+            <li><a href="#test">C.B. Test</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="./signup.html"
-                ><span class="glyphicon glyphicon-user"></span> Sign Up</a
-              >
-            </li>
-            <li>
-              <a href="./login.html"
-                ><span class="glyphicon glyphicon-log-in"></span> Login</a
-              >
-            </li>
+            <li><a href="./signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="./login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           </ul>
         </div>
-      </nav>
     </nav>
 
     <div class="container text-center">
       <div class="row">
         <div class="col-sm-12">
-          <div class="row">
+          <div class="row" id="music">
             <div class="col-sm-12">
               <div class="col-sm-12 well">
-                <!-- <div><div id="container1"></div></div> -->
-                <!-- <div id="synthNavbar" class="well"></div> -->
                 <img
                   class="img-fluid"
                   alt="sheet music"
                   id="sheetMusic"
-                  src="./images/music.png"
+                  src="./img/music.png"
                 />
               </div>
             </div>
           </div>
 
-          <div class="row">
+          <div id="piano" class="row">
             <div class="col-sm-12">
               <div class="panel panel-default text-left">
                 <div class="panel-body">
-                  <p>Piano</p>
                   <div id="root"></div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="row controls">
+          <div class="container-fluid" id="pageKnobs">
+                <img class="img-fluid hueKnob" src="./img/hueKnob.png" alt="dial that changes hue"/>
+                <!-- <button id="Hue">console.log() Hue</button><br /> -->
+                <img class="img-fluid saturationKnob" src="./img/saturationKnob.png" alt="dial that changes saturation" />
+                <!-- <button id="Saturation">console.log() Saturation</button><br /> -->
+                <img class="img-fluid lightnessKnob"  src="./img/lightnessKnob.png"  alt="dial that changes lightness" />
+                <!-- <button id="Lightness">console.log() Lightness</button><br /> -->
+          </div>
+
+          <div id="magnets" class="row controls">
             <ul>
               <li class="controlsTitle">Options</li>
-              <li>
-                <label
-                  ><input type="checkbox" name="snap" id="snap" value="1" />
-                  Snap end position to grid</label
-                >
-              </li>
-              <li>
-                <label
-                  ><input
-                    type="checkbox"
-                    name="liveSnap"
-                    id="liveSnap"
-                    value="1"
-                  />
-                  Live snap</label
-                >
-              </li>
+              <li><label><input type="checkbox" name="snap" id="snap" value="1" />Snap end position to grid</label></li>
+              <li><label><input type="checkbox" name="liveSnap" id="liveSnap" value="1"/> Live snap</label></li>
             </ul>
           </div>
+
           <div class="row">
             <div id="buttons"></div>
             <div id="letter"></div>
           </div>
+
           <div class="well container-fluid" id="letterContainer"></div>
+
         </div>
       </div>
     </div>
 
-    <div class="form-group rsform-block rsform-block-framecontent row">
-      <div
-        class="container-fluid sm-col-10"
-        id="frame"
-        role="application"
-      ></div>
+    <div id="test" class="form-group rsform-block rsform-block-framecontent row">
+      <div class="container-fluid sm-col-10" id="frame" role="application"></div>
     </div>
-    <hr />
+
+    <hr/>
 
     <div class="row col-sm-6 formControls rsform-block-submit">
-      <button
-        type="submit"
-        name="form[submit]"
-        id="submit"
-        onclick="copyText()"
-        class="rsform-submit-button  btn btn-primary"
-      >
-        Submit Quiz
-      </button>
+      <button type="submit" name="form[submit]" id="submit" onclick="copyText()" class="rsform-submit-button  btn btn-primary">Submit Quiz</button>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
@@ -212,14 +134,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="greensock-js-shockingly-green/src/uncompressed/plugins/ThrowPropsPlugin.js"></script>
+    <script src="greensock-js-shockingly-green/src/uncompressed/plugins/EaselPlugin.js"></script>
     <script type="text/javascript" src="./js/dnd.js"></script>
     <script type="text/javascript" src="./js/cbtest.js"></script>
 
     <footer class="container-fluid text-center">
-      <p>
-        Copyright © 2018 by
-        <a href="https://github.com/apleek3/finalproject">These Guys</a>.
-      </p>
+      <p> Copyright © 2018 by<a href="https://github.com/apleek3/finalproject">These Guys</a>. </p>
     </footer>
+    
   </body>
 </html>

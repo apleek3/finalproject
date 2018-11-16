@@ -43,3 +43,20 @@ body {
     border-top-right-radius: 0;
     margin-bottom: 10px;
 }
+
+
+.jumbotron {
+    background-image: url(../img/Synesthesia1.png);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin-bottom: 0px;
+    text-shadow: black 0.3em 0.3em 0.3em;
+    height:40vh;
+}
+
+#titleSynth {
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+  }
