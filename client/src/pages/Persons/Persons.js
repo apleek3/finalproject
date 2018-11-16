@@ -47,7 +47,7 @@ class Form extends Component {
           Hello {this.state.firstName} {this.state.lastName}
         </p>
         <form className="form">
-          <label for="firstName">First Name
+          <label htmlFor="firstName">First Name
             <input
               id="firstName" 
               value={this.state.firstName}
@@ -57,7 +57,7 @@ class Form extends Component {
               placeholder="First Name" 
             />
           </label>
-          <label for="lastName">Last Name
+          <label htmlFor="lastName">Last Name
             <input
             id="lastName"
               value={this.state.lastName}

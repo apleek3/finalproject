@@ -53,3 +53,24 @@ footer {
 /* .ReactPiano__Key--accidental--P {background-color: ;} */
 .ReactPiano__Key--natural--sym1 {background-color: red;}
 .ReactPiano__Key--natural--sym2 {color: white; background-color: gray;}
+
+.ReactPiano__Key--natural {
+    background: lightblue;
+    border: 1px solid #888;
+    border-radius: 0 0 6px 6px;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.ReactPiano__NoteLabel {
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    text-transform: capitalize;
+    /* Disable text selection */
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }

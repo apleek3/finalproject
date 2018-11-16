@@ -91,7 +91,7 @@ $(document).ready(function() {
         backgroundColor: "hsl(+=" + hue + "%, +=0%, +=0%)",
         // backgroundColor: "hue-rotate("+360/hue+")",
         ease: Linear.easeNone,
-        delay: 0.4
+        delay: 0
       });
       var color = { hueDeg: 0 };
       var image = $("#sheetMusic")[0];
@@ -140,18 +140,18 @@ $(document).ready(function() {
       
       console.log(this.rotation);
       TweenLite.to(".box", 0, {
-        color: "hsl(+=0%, +=" + this.rotation / 100 + ", +=0%)",
+        color: "hsl(+=0%, +=" + this.rotation / 10 + ", +=0%)",
         ease: Linear.easeNone,
         delay: 0.0
       });
       TweenLite.to(".ReactPiano__Key--natural", 0, {
-        backgroundColor: "hsl(+=0%, +=" + this.rotation / 100 + ", +=0%)",
+        backgroundColor: "hsl(+=0%, +=" + this.rotation / 10 + ", +=0%)",
         ease: Linear.easeNone,
         delay: 0.4
       });
 
-      TweenLite.to(".jumbotron", 0, {
-        easel:{saturation: this.rotation, delay: 0}});
+      // TweenLite.to(".jumbotron", 0, { ICEBOX
+      //   easel:{saturation: this.rotation, delay: 0}});
     }
   });
   //This is the button that logs the angle value of the knob turns. This data can be used for the person later to get a general sense of what color turns work best for them

@@ -1,3 +1,19 @@
+.navbar {
+  color: black !important;
+  font: 100px !important;
+  font-weight: 1000;
+  fill-opacity: 0;
+  min-height: 5vh !important
+}
+
+.navbar-brand {
+  font: 100px !important
+}
+
+a {
+  font: 100px !important;
+}
+
 #letterContainer {
   overflow: visible;
   padding: 0;
