@@ -47,174 +47,174 @@ if (!("scramble" in Array.prototype)) {
   });
 }
 var quiz = [
-  {
-    question: "Q1: What number do you see?",
-    image:
-      "https://i.imgur.com/JWJMiSC.jpg",
-    choices: [
-      "7",
-      "14",
-      "25",
-      "57"
-    ],
-    correct: "7",
-    explanation:
-      "The number pictured is 7. Those with normal color vision will see this number. The number may be unclear if you are color blind."
-  },
-  {
-    question: "Q2: What number do you see?",
-    image:
-      "https://i.imgur.com/ae65y2p.jpg",
-      choices: [
-        "27",
-        "57",
-        "6",
-        "28"
-      ],
-    correct: "6",
-    explanation:
-      "The number pictured is 6. Those with normal color vision will see this number. The number may be unclear if you are color blind."
-  },
-  {
-    question: "Q3: What number do you see?",
-    image:
-      "https://i.imgur.com/6gm5bkl.jpg",
-      choices: [
-        "6",
-        "26",
-        "66",
-        "2"
-      ],
-    correct: "26",
-    explanation:
-      "The number pictured is 26. Those with normal color vision will see this number. Individuals with red color blindness will see the number 6. Individuals with green color blindness might just see the number 2."
-  },
-  {
-    question: "Q4: What number do you see?",
-    image:
-      "https://i.imgur.com/zyb1Hyy.jpg",
-      choices: [
-        "69",
-        "15",
-        "31",
-        "17"
-      ],
-    correct: "15",
-    explanation:
-      "The number pictured is 15. Those with normal color vision will see this number. Individuals with red green color blindness will see the number 17."
-  },
-  {
-    question: "Q5: What number do you see?",
-    image:
-      "https://i.imgur.com/NK1MVM1.jpg",
-      choices: [
-        "6",
-        "79",
-        "52",
-        "9"
-      ],
-    correct: "6",
-    explanation:
-      "The number pictured is 6. Those with normal color vision will see this number. The number may be unclear if you are color blind"
-  },
-  {
-    question: "Q6: What number do you see?",
-    image:
-      "https://i.imgur.com/PFV63Kk.jpg",
-      choices: [
-        "82",
-        "49",
-        "73",
-        "24"
-      ],
-    correct: "73",
-    explanation:
-      "The number pictured is 73. Those with normal color vision will see this number. The number may be unclear if you are color blind"
-  },
-  {
-    question: "Q7: What number do you see?",
-    image:
-      "https://i.imgur.com/MZ8EEBg.jpg",
-      choices: [
-        "36",
-        "5",
-        "25",
-        "8"
-      ],
-    correct: "5",
-    explanation:
-      "The number pictured is 5. Those with normal color vision will see this number. The number may be unclear if you are color blind"
-  },
-  {
-    question: "Q8: What number do you see?",
-    image:
-      "https://i.imgur.com/D84klZZ.jpg",
-      choices: [
-        "62",
-        "2",
-        "41",
-        "16"
-      ],
-    correct: "16",
-    explanation:
-      "The number pictured is 16. Those with normal color vision will see this number. The number may be unclear if you are color blind"
-  },
-  {
-    question: "Q9: What number do you see?",
-    image:
-      "https://i.imgur.com/QrhietF.jpg",
-      choices: [
-        "35",
-        "17",
-        "45",
-        "65"
-      ],
-    correct: "45",
-    explanation:
-      "The number pictured is 45. Those with normal color vision will see this number. The number may be unclear if you are color blind"
-  },
-  {
-    question: "Q10: What number do you see?",
-    image:
-      "https://i.imgur.com/yg1KyQC.jpg",
-      choices: [
-        "60",
-        "12",
-        "17",
-        "37"
-      ],
-    correct: "12",
-    explanation:
-      "The number pictured is 12. Everyone should see the number 12, including those that are color blind."
-  },
-  {
-    question: "Q11: What number do you see?",
-    image:
-      "https://i.imgur.com/ix5KUqL.jpg",
-      choices: [
-        "70",
-        "45",
-        "29",
-        "23"
-      ],
-    correct: "29",
-    explanation:
-      "The number pictured is 29. Those with normal color vision will see this number. If you are red-green color blind, you will see the number 70. If you do not see anything, you may have total color blindness."
-  },
-  {
-    question: "Q12: What number do you see?",
-    image:
-      "https://i.imgur.com/gwq06A9.jpg",
-      choices: [
-        "48",
-        "3",
-        "11",
-        "8"
-      ],
-    correct: "8",
-    explanation:
-      "The number pictured is 8. Those with normal color vision will see this number. If you are red-green color blind, you will see the number 3. If you do not see anything, you may have total color blindness."
-  },
+  // {
+  //   question: "Q1: What number do you see?",
+  //   image:
+  //     "https://i.imgur.com/JWJMiSC.jpg",
+  //   choices: [
+  //     "7",
+  //     "14",
+  //     "25",
+  //     "57"
+  //   ],
+  //   correct: "7",
+  //   explanation:
+  //     "The number pictured is 7. Those with normal color vision will see this number. The number may be unclear if you are color blind."
+  // },
+  // {
+  //   question: "Q2: What number do you see?",
+  //   image:
+  //     "https://i.imgur.com/ae65y2p.jpg",
+  //     choices: [
+  //       "27",
+  //       "57",
+  //       "6",
+  //       "28"
+  //     ],
+  //   correct: "6",
+  //   explanation:
+  //     "The number pictured is 6. Those with normal color vision will see this number. The number may be unclear if you are color blind."
+  // },
+  // {
+  //   question: "Q3: What number do you see?",
+  //   image:
+  //     "https://i.imgur.com/6gm5bkl.jpg",
+  //     choices: [
+  //       "6",
+  //       "26",
+  //       "66",
+  //       "2"
+  //     ],
+  //   correct: "26",
+  //   explanation:
+  //     "The number pictured is 26. Those with normal color vision will see this number. Individuals with red color blindness will see the number 6. Individuals with green color blindness might just see the number 2."
+  // },
+  // {
+  //   question: "Q4: What number do you see?",
+  //   image:
+  //     "https://i.imgur.com/zyb1Hyy.jpg",
+  //     choices: [
+  //       "69",
+  //       "15",
+  //       "31",
+  //       "17"
+  //     ],
+  //   correct: "15",
+  //   explanation:
+  //     "The number pictured is 15. Those with normal color vision will see this number. Individuals with red green color blindness will see the number 17."
+  // },
+  // {
+  //   question: "Q5: What number do you see?",
+  //   image:
+  //     "https://i.imgur.com/NK1MVM1.jpg",
+  //     choices: [
+  //       "6",
+  //       "79",
+  //       "52",
+  //       "9"
+  //     ],
+  //   correct: "6",
+  //   explanation:
+  //     "The number pictured is 6. Those with normal color vision will see this number. The number may be unclear if you are color blind"
+  // },
+  // {
+  //   question: "Q6: What number do you see?",
+  //   image:
+  //     "https://i.imgur.com/PFV63Kk.jpg",
+  //     choices: [
+  //       "82",
+  //       "49",
+  //       "73",
+  //       "24"
+  //     ],
+  //   correct: "73",
+  //   explanation:
+  //     "The number pictured is 73. Those with normal color vision will see this number. The number may be unclear if you are color blind"
+  // },
+  // {
+  //   question: "Q7: What number do you see?",
+  //   image:
+  //     "https://i.imgur.com/MZ8EEBg.jpg",
+  //     choices: [
+  //       "36",
+  //       "5",
+  //       "25",
+  //       "8"
+  //     ],
+  //   correct: "5",
+  //   explanation:
+  //     "The number pictured is 5. Those with normal color vision will see this number. The number may be unclear if you are color blind"
+  // },
+  // {
+  //   question: "Q8: What number do you see?",
+  //   image:
+  //     "https://i.imgur.com/D84klZZ.jpg",
+  //     choices: [
+  //       "62",
+  //       "2",
+  //       "41",
+  //       "16"
+  //     ],
+  //   correct: "16",
+  //   explanation:
+  //     "The number pictured is 16. Those with normal color vision will see this number. The number may be unclear if you are color blind"
+  // },
+  // {
+  //   question: "Q9: What number do you see?",
+  //   image:
+  //     "https://i.imgur.com/QrhietF.jpg",
+  //     choices: [
+  //       "35",
+  //       "17",
+  //       "45",
+  //       "65"
+  //     ],
+  //   correct: "45",
+  //   explanation:
+  //     "The number pictured is 45. Those with normal color vision will see this number. The number may be unclear if you are color blind"
+  // },
+  // {
+  //   question: "Q10: What number do you see?",
+  //   image:
+  //     "https://i.imgur.com/yg1KyQC.jpg",
+  //     choices: [
+  //       "60",
+  //       "12",
+  //       "17",
+  //       "37"
+  //     ],
+  //   correct: "12",
+  //   explanation:
+  //     "The number pictured is 12. Everyone should see the number 12, including those that are color blind."
+  // },
+  // {
+  //   question: "Q11: What number do you see?",
+  //   image:
+  //     "https://i.imgur.com/ix5KUqL.jpg",
+  //     choices: [
+  //       "70",
+  //       "45",
+  //       "29",
+  //       "23"
+  //     ],
+  //   correct: "29",
+  //   explanation:
+  //     "The number pictured is 29. Those with normal color vision will see this number. If you are red-green color blind, you will see the number 70. If you do not see anything, you may have total color blindness."
+  // },
+  // {
+  //   question: "Q12: What number do you see?",
+  //   image:
+  //     "https://i.imgur.com/gwq06A9.jpg",
+  //     choices: [
+  //       "48",
+  //       "3",
+  //       "11",
+  //       "8"
+  //     ],
+  //   correct: "8",
+  //   explanation:
+  //     "The number pictured is 8. Those with normal color vision will see this number. If you are red-green color blind, you will see the number 3. If you do not see anything, you may have total color blindness."
+  // },
   {
     question: "Q13: What number do you see?",
     image:
@@ -247,6 +247,9 @@ jQuery(document).ready(function($) {
    * HTML Encoding function for alt tags and attributes to prevent messy
    * data appearing inside tag attributes.
    */
+
+  $("#synthNavbar").hide();
+
   function htmlEncode(value) {
     return $(document.createElement("div"))
       .text(value)
@@ -276,6 +279,7 @@ jQuery(document).ready(function($) {
    */
   function nextQuestion() {
     submit = true;
+    $("#synthNavbar").hide();////////////////
     $("#explanation").empty();
     $("#question").text(quiz[currentquestion]["question"]);
     $("#pager").text(
@@ -460,6 +464,11 @@ jQuery(document).ready(function($) {
       .addClass("score")
       .text(Math.round((score / quiz.length) * 100) + "%")
       .insertAfter("#question");
+      $(document.createElement("h4"))
+      .addClass("notes")/////////////////////////////////////////////////////////////////////
+      .text("How did you feel about the test? Did you think it was accurate?")
+      .insertAfter(".score");
+      $("#synthNavbar").show();
   }
 
   /**
