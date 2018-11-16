@@ -69,29 +69,55 @@ $(document).ready(function() {
   });
 
   // console.clear(); //Clear the Console on start of the page
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////HUE/////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////HUE/////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //This knob controls the "hue" or general color of our colored fridge magnets
   Draggable.create("#hueKnob", {
     type: "rotation",
     throwProps: true,
     onDrag: function() {
       console.log(this.endRotation);
-      let hue = this.endRotation / 100
+      let hue = this.endRotation / 1000;
       TweenLite.to(".box", 0, {
-        color: "hsl(+=" + hue + ", +=0%, +=0%)",
+        color: "hsl(+=" + hue + "%, +=0%, +=0%)",
+        // color: "hue-rotate("+360/hue+")",
         ease: Linear.easeNone,
         delay: 0.4
       });
       TweenLite.to(".ReactPiano__Key--natural", 0, {
-        backgroundColor: "hsl(+=" + hue + ", +=0%, +=0%)",
+        backgroundColor: "hsl(+=" + hue + "%, +=0%, +=0%)",
+        // backgroundColor: "hue-rotate("+360/hue+")",
         ease: Linear.easeNone,
         delay: 0.4
-      });   
-    },
+      });
+      var color = { hueDeg: 0 };
+      var image = $("#sheetMusic")[0];
+      var jumbotron = $(".jumbotron")[0]
+
+      TweenMax.to(color, 0, {
+        hueDeg: 10000/hue,
+        onUpdate: applyColor,
+        onUpdateParams: [image],
+        ease: Linear.easeNone,
+        delay: 0.4,
+      });
+
+      TweenMax.to(color, 0, {
+        hueDeg: 10000/hue,
+        onUpdate: applyColor,
+        onUpdateParams: [jumbotron],
+        ease: Linear.easeNone,
+        delay: 0.4,
+      });
+
+      function applyColor(element) {
+        //apply filter yourself
+        element.style["-webkit-filter"] = "hue-rotate(" + color.hueDeg + "deg)";
+      }
+    }
   });
   //This is the button that logs the angle value of the knob turns. This data can be used for the person later to get a general sense of what color turns work best for them
   $("#Hue").click(function() {
@@ -102,71 +128,73 @@ $(document).ready(function() {
     console.log(Draggable.get("#hueKnob").endRotation, "from Draggable.get()");
   });
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////SATURATION//////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Draggable.create("#saturationKnob", {
-  type: "rotation",
-  throwProps: true,
-  onDrag: function() {
-    console.log(this.rotation);
-    TweenLite.to(".box", 0, {
-      color: "hsl(+=0%, +=" + this.rotation/100 + ", +=0%)",
-      ease: Linear.easeNone,
-      delay: 0.0
-    });
-    TweenLite.to(".ReactPiano__Key--natural", 0, {
-      backgroundColor: "hsl(+=0%, +=" + this.rotation/100 + ", +=0%)",
-      ease: Linear.easeNone,
-      delay: 0.4
-    });   
-  }
-});
-//This is the button that logs the angle value of the knob turns. This data can be used for the person later to get a general sense of what color turns work best for them
-$("#Saturation").click(function() {
-  console.log(
-    document.getElementById("saturationKnob")._gsTransform.rotation,
-    "from element"
-  );
-  console.log(Draggable.get("#saturationKnob").rotation, "from Draggable.get()");
-});
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////SATURATION//////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Draggable.create("#saturationKnob", {
+    type: "rotation",
+    throwProps: true,
+    onDrag: function() {
+      console.log(this.rotation);
+      TweenLite.to(".box", 0, {
+        color: "hsl(+=0%, +=" + this.rotation / 100 + ", +=0%)",
+        ease: Linear.easeNone,
+        delay: 0.0
+      });
+      TweenLite.to(".ReactPiano__Key--natural", 0, {
+        backgroundColor: "hsl(+=0%, +=" + this.rotation / 100 + ", +=0%)",
+        ease: Linear.easeNone,
+        delay: 0.4
+      });
+    }
+  });
+  //This is the button that logs the angle value of the knob turns. This data can be used for the person later to get a general sense of what color turns work best for them
+  $("#Saturation").click(function() {
+    console.log(
+      document.getElementById("saturationKnob")._gsTransform.rotation,
+      "from element"
+    );
+    console.log(
+      Draggable.get("#saturationKnob").rotation,
+      "from Draggable.get()"
+    );
+  });
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////LIGHTNESS///////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Draggable.create("#lightnessKnob", {
-  type: "rotation",
-  throwProps: true,
-  onDrag: function() {
-    console.log(this.rotation);
-    TweenLite.to(".box", 0, {
-      color: "hsl(+=0%, +=0%, +=" + this.rotation/10 + ")",
-      ease: Linear.easeNone,
-      delay: 0.0
-    });
-    TweenLite.to(".ReactPiano__Key--natural", 0, {
-      backgroundColor: "hsl(+=0%, +=0%, +=" + this.rotation/10 + ")",
-      ease: Linear.easeNone,
-      delay: 0.4
-    });   
-  },
-  
-});
-//This is the button that logs the angle value of the knob turns. This data can be used for the person later to get a general sense of what color turns work best for them
-$("#Lightness").click(function() {
-  console.log(
-    document.getElementById("lightnessKnob")._gsTransform.rotation,
-    "from element"
-  );
-  console.log(Draggable.get("#lightnessKnob").rotation, "from Draggable.get()");
-});
-
-
-
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////LIGHTNESS///////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Draggable.create("#lightnessKnob", {
+    type: "rotation",
+    throwProps: true,
+    onDrag: function() {
+      console.log(this.rotation);
+      TweenLite.to(".box", 0, {
+        color: "hsl(+=0%, +=0%, +=" + this.rotation / 10 + ")",
+        ease: Linear.easeNone,
+        delay: 0.0
+      });
+      TweenLite.to(".ReactPiano__Key--natural", 0, {
+        backgroundColor: "hsl(+=0%, +=0%, +=" + this.rotation / 10 + ")",
+        ease: Linear.easeNone,
+        delay: 0.4
+      });
+    }
+  });
+  //This is the button that logs the angle value of the knob turns. This data can be used for the person later to get a general sense of what color turns work best for them
+  $("#Lightness").click(function() {
+    console.log(
+      document.getElementById("lightnessKnob")._gsTransform.rotation,
+      "from element"
+    );
+    console.log(
+      Draggable.get("#lightnessKnob").rotation,
+      "from Draggable.get()"
+    );
+  });
 
   //the update() function is what creates the Draggable according to the options selected (snapping).
   function update() {
