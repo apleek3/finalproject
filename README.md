@@ -90,4 +90,4 @@ We hope you enjoy and see some utility in these tools for yourself and for other
 ### Click here: [Synesthesia Video]()
 
 ### Want to do it live?
-### Click here: [Synesethesia App]()
+### Click here: [Synesethesia App](https://synthro.herokuapp.com/)
