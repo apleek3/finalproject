@@ -1,3 +1,19 @@
+.navbar {
+  color: black !important;
+  font: 100px !important;
+  font-weight: 1000;
+  fill-opacity: 0;
+  min-height: 5vh !important
+}
+
+.navbar-brand {
+  font: 100px !important
+}
+
+a {
+  font: 100px !important;
+}
+
 #letterContainer {
   overflow: visible;
   padding: 0;
@@ -144,6 +160,36 @@ body {
   z-index: 9999 !important;
 }
 
+#synthNavbar {
+width: 100%;
+}
+
+.list-group-item {
+  color: black !important;
+}
+
+#fullName {
+  height: 100px !important;
+}
+
+#review {
+  height: 100px !important;
+}
+
+
+.nameForm {
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+input {
+    height: 200px !important;
+}
+
+h5 {
+  font-size: 40px !important;
+  font-weight: 1000 !important;
+}
 /* Rainbow Color Palette */
 .ReactPiano__Key--natural--A {background-color: blue;}
 /* .ReactPiano__Key--accidental--W {background-color: ;} */

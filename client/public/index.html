@@ -121,16 +121,20 @@
       </div>
     </div>
 
+
+
     <div id="test" class="form-group rsform-block rsform-block-framecontent row">
-      <div class="container-fluid sm-col-10" id="frame" role="application"></div>
-      <div id="synthNavbar"></div> <!--Routed Information-->
+        <div class="row col-sm-6 formControls rsform-block-submit">
+            <button type="reset" name="reset" id="reset" class="rsform-submit-button  btn btn-primary">Reset Quiz</button>
+        </div>
+         <div class="row well">
+           <div class="container-fluid sm-col-6" id="frame" role="application"></div>
+        </div>
+
+        <div class="col-sm-12 container-fluid" id="synthNavbar"></div> <!--Routed Information-->
     </div>
 
-    <hr/>
-
-    <div class="row col-sm-6 formControls rsform-block-submit">
-      <button type="submit" name="form[submit]" id="submit" onclick="copyText()" class="rsform-submit-button  btn btn-primary">Submit Quiz</button>
-    </div>
+       <hr/>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/utils/Draggable.min.js"></script>
