@@ -7,10 +7,10 @@ const Nav = () =>
     {/* <Link className="navbar-brand" to="/">User Search</Link> */}
     <ul className="navbar-nav">
       <li className="nav-item">
-        <Link to="/"><button type="button" className="btn btn-primary">Home</button></Link>
+        <Link to="/"><button type="button" className="btn btn-primary">Add a Review</button></Link>
       </li>
       <li className="nav-item">
-        <Link to="/savedUsers"><button type="button" className="btn btn-primary">Saved Users</button></Link>
+        <Link to="/savedPersons"><button type="button" className="btn btn-primary">See Previous Reviews</button></Link>
       </li>
     </ul>
 </nav>;

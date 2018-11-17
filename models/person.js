@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const personSchema = new Schema({
-  firstName: { type: String, required: true },
-  lastName: { type: String, required: true },
+  fullName: { type: String, required: true },
+  review: {  type: String, required: true  }
 });
 
 const Person = mongoose.model("Person", personSchema);

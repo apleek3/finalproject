@@ -26,6 +26,7 @@ input[type="radio"] {
 .form-group select {
   height: 30px;
   padding: 0px 12px;
+
 }
 .form-horizontal .form-group {
   margin: 10px;
@@ -200,3 +201,17 @@ img.question-image {
   font-size: 40px !important;
 }
 
+#synthNavbar {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+
+}
+
+.notes {
+  margin: 0 auto;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}

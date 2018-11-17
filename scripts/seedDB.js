@@ -10,9 +10,8 @@ mongoose.connect(
 
 const personSeed = [
   {
-    firstName: "Bob",
-    lastName: "Smith",
-    date: new Date(Date.now())
+    fullName: "Bob Smith",
+    review: "Smith is awesome",
   }
 ];
 

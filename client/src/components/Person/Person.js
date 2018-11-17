@@ -6,20 +6,16 @@ import { ListItem } from '../List'
 
 
 export const Person = props => (
+  <div className="list-group">
 
-  <div className="list-group" style={{margin: '30px 0'}}>
-    <a rel="noopener noreferrer"href={props.url} className="bg-dark list-group-item list-group-item-action flex-column align-items-start active" target="_blank">
-      <div className="d-flex w-100 justify-content-between">
-        <h5 className="mb-1">{props.title}</h5>
-        {/* <small>{moment(props.date).format("dddd, MMMM Do YYYY, h:mm")}</small>  */}
-      </div>
-    </a>
+        <h5 className="mb-1">{props.fullName}</h5>
+
     <ListItem  className="list-group-item">
-      <div className=" w-75" style={{display: 'inline-block'}}>
-        <h5 className="mb-1">{props.summary}</h5>
-      </div>
-      <div className="btn-group" role="group" aria-label="Person example" style={{float: 'right'}}>
-        <a rel="noopener noreferrer"href={props.url} target='_blank'><button type="button" className="btn btn-info">Read</button></a>
+
+        <h5 className="mb-1">{props.review}</h5>
+
+      <div className="btn-group" role="group" aria-label="Person example">
+        {/* <a rel="noopener noreferrer"href={props.url} target='_blank'><button type="button" className="btn btn-info">Read</button></a> */}
         <button type="button" className="btn btn-primary" onClick={props.onClick}>{props.type}</button>
       </div>
     </ListItem>

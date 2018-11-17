@@ -1,76 +1,116 @@
 .jumbotron {
-    background-image: url(./images/Synesthesia1.png);
-    background-position: 0% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    margin-bottom: 0px;
-    text-shadow: black 0.3em 0.3em 0.3em;
-    height: 90vh;
+  background-image: url(./images/Synesthesia1.png);
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  margin-bottom: 0px;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  height: 90vh;
 }
 
 .PianoDarkTheme .ReactPiano__Key--accidental {
-    background: #025d7d;
-    border: 1px solid #888;
+  background: #025d7d;
+  border: 1px solid #888;
 }
 
 .PianoDarkTheme .ReactPiano__Key--natural {
-    background: #013243;
-    border: 1px solid #888;
-    margin-right: 0;
+  background: #013243;
+  border: 1px solid #888;
+  margin-right: 0;
 }
 
 .PianoDarkTheme .ReactPiano__Key--active.ReactPiano__Key--accidental {
-    background: #0396ca;
+  background: #0396ca;
 }
 
 .PianoDarkTheme .ReactPiano__Key--active.ReactPiano__Key--natural {
-    background: #0396ca;
+  background: #0396ca;
 }
 
 footer {
-    background-color: #555;
-    color: white;
-    padding: 15px;
+  background-color: #555;
+  color: white;
+  padding: 15px;
 }
 
 /* Rainbow Color Palette */
-.ReactPiano__Key--natural--A {background-color: blue;}
+.ReactPiano__Key--natural--A {
+  background-color: blue;
+}
 /* .ReactPiano__Key--accidental--W {background-color: ;} */
-.ReactPiano__Key--natural--S {background-color: yellow;}
+.ReactPiano__Key--natural--S {
+  background-color: yellow;
+}
 /* .ReactPiano__Key--accidental--E {background-color: ;} */
-.ReactPiano__Key--natural--D {background-color: red;}
-.ReactPiano__Key--natural--F {color: white; background-color: gray;}
+.ReactPiano__Key--natural--D {
+  background-color: red;
+}
+.ReactPiano__Key--natural--F {
+  color: white;
+  background-color: gray;
+}
 /* .ReactPiano__Key--accidental--T {background-color: ;} */
-.ReactPiano__Key--natural--G {background-color: green;}
+.ReactPiano__Key--natural--G {
+  background-color: green;
+}
 /* .ReactPiano__Key--accidental--Y {background-color: ;} */
-.ReactPiano__Key--natural--H {background-color: orange;}
+.ReactPiano__Key--natural--H {
+  background-color: orange;
+}
 /* .ReactPiano__Key--accidental--U {background-color: ;} */
-.ReactPiano__Key--natural--J {background-color: purple;}
-.ReactPiano__Key--natural--K {background-color: blue;}
+.ReactPiano__Key--natural--J {
+  background-color: purple;
+}
+.ReactPiano__Key--natural--K {
+  background-color: blue;
+}
 /* .ReactPiano__Key--accidental--O {background-color: ;} */
-.ReactPiano__Key--natural--L {background-color: yellow;}
+.ReactPiano__Key--natural--L {
+  background-color: yellow;
+}
 /* .ReactPiano__Key--accidental--P {background-color: ;} */
-.ReactPiano__Key--natural--sym1 {background-color: red;}
-.ReactPiano__Key--natural--sym2 {color: white; background-color: gray;}
+.ReactPiano__Key--natural--sym1 {
+  background-color: red;
+}
+.ReactPiano__Key--natural--sym2 {
+  color: white;
+  background-color: gray;
+}
 
 .ReactPiano__Key--natural {
-    background: lightblue;
-    border: 1px solid #888;
-    border-radius: 0 0 6px 6px;
-    cursor: pointer;
-    z-index: 0;
+  background: lightblue;
+  border: 1px solid #888;
+  border-radius: 0 0 6px 6px;
+  cursor: pointer;
+  z-index: 0;
 }
 
 .ReactPiano__NoteLabel {
-    background-color: black;
-    color: white;
-    font-size: 24px;
-    text-align: center;
-    text-transform: capitalize;
-    /* Disable text selection */
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  text-transform: capitalize;
+  /* Disable text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#synthNavbar {
+  width: 100%;
+}
+
+#fullName {
+  height: 100px;
+}
+
+#review {
+  height: 100px;
+}
+
+input {
+    height: 200px;
+}

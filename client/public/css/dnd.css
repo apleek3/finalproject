@@ -160,6 +160,36 @@ body {
   z-index: 9999 !important;
 }
 
+#synthNavbar {
+width: 100%;
+}
+
+.list-group-item {
+  color: black !important;
+}
+
+#fullName {
+  height: 100px !important;
+}
+
+#review {
+  height: 100px !important;
+}
+
+
+.nameForm {
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+input {
+    height: 200px !important;
+}
+
+h5 {
+  font-size: 40px !important;
+  font-weight: 1000 !important;
+}
 /* Rainbow Color Palette */
 .ReactPiano__Key--natural--A {background-color: blue;}
 /* .ReactPiano__Key--accidental--W {background-color: ;} */

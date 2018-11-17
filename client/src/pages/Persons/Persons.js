@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import TextArea from "../../components/Form/TextArea";
 import API from "../../utils/API";
 
 class Form extends Component {
   // Setting the component's initial state
   state = {
-    firstName: "",
-    lastName: ""
+    fullName: "",
+    review: ""
   };
 
   handleInputChange = event => {
@@ -21,52 +22,67 @@ class Form extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    if (!this.state.firstName || !this.state.lastName) {
-      alert("Fill out your first and last name please!");
+    if (!this.state.fullName || !this.state.review) {
+      alert("Fill out your full name name please!");
     } else {
-      alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
       API.savePerson({
-        firstName: this.state.firstName,
-        lastName: this.state.lastName
+        fullName: this.state.fullName,
+        review: this.state.review
       })
         // .then(res => this.loadPerson())
         .catch(err => console.log(err));
     }
 
     this.setState({
-      firstName: "",
-      lastName: ""
+      fullName: "",
+      review: ""
     });
   };
 
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
-      <div>
-        <p>
-          Hello {this.state.firstName} {this.state.lastName}
-        </p>
+      <div className="nameForm container-fluid row">
+        <p>Hello {this.state.fullName}</p>
         <form className="form">
-          <label htmlFor="firstName">First Name
-            <input
-              id="firstName" 
-              value={this.state.firstName}
-              name="firstName"
+          <div className="container-fluid row">
+            <label htmlFor="fullName">
+              Full Name
+              <input
+                id="fullName"
+                className="col-sm-12 container-fluid well"
+                value={this.state.fullName}
+                name="fullName"
+                onChange={this.handleInputChange}
+                type="text"
+                placeholder="Full Name"
+              />
+            </label>
+          </div>
+          {/* <input
+            id="review"
+              value={this.state.review}
+              name="review"
               onChange={this.handleInputChange}
               type="text"
-              placeholder="First Name" 
-            />
-          </label>
-          <label htmlFor="lastName">Last Name
-            <input
-            id="lastName"
-              value={this.state.lastName}
-              name="lastName"
-              onChange={this.handleInputChange}
-              type="text"
-              placeholder="Last Name"
-            />
-          </label>
+              placeholder="Submit a Review Here"
+
+            /> */}
+          <div className="nameForm container-fluid row">
+            <label htmlFor="review">
+              Review
+              <TextArea
+                id="review"
+                className="container-fluid col-sm-12 well"
+                onChange={this.handleInputChange}
+                type="text"
+                value={this.state.review}
+                name="review"
+                placeholder="write something..."
+              />
+              <label />
+            </label>
+          </div>
           <button onClick={event => this.handleFormSubmit(event)}>
             Submit
           </button>
