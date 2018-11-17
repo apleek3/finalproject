@@ -87,7 +87,7 @@ We hope you enjoy and see some utility in these tools for yourself and for other
 
 ## DEMO
 ### Want to see a demo of it working? 
-### Click here: [Synthro Video]()
+### Click here: [Synthro Video](https://youtu.be/1G1jzMEMw78)
 
 ### Want to do it live?
 ### Click here: [Synthro](https://synthro.herokuapp.com/)
