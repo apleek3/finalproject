@@ -339,11 +339,11 @@ jQuery(document).ready(function($) {
     ) {
       $(".choice")
         .eq(choice)
-        .addClass("btn-success")
+        .addClass("btn-secondary")
         .css({
           "font-weight": "bold",
           "border-color": "#51a351",
-          color: "#fff"
+          color: "black"
         });
       $("#explanation").html(
         '<span class="correct">CORRECT!</span> ' +
@@ -357,7 +357,7 @@ jQuery(document).ready(function($) {
         .css({
           "font-weight": "bold",
           "border-color": "#f93939",
-          color: "#fff"
+          color: "black"
         });
       $("#explanation").html(
         '<span class="incorrect">INCORRECT!</span> ' +
@@ -369,11 +369,11 @@ jQuery(document).ready(function($) {
     if (currentquestion == quiz.length) {
       $("#submitbutton")
         .html("GET QUIZ RESULTS")
-        .removeClass("btn-success")
+        .removeClass("btn-secondary")
         .addClass("btn-info")
         .css({
           "border-color": "#3a87ad",
-          color: "#fff"
+          color: "black"
         })
         .on("click", function() {
           $(this)
@@ -384,22 +384,22 @@ jQuery(document).ready(function($) {
     } else if (currentquestion < quiz.length) {
       $("#submitbutton")
         .html("NEXT QUESTION &raquo;")
-        .removeClass("btn-success")
+        .removeClass("btn-secondary")
         .addClass("btn-warning")
         .css({
           "font-weight": "bold",
           "border-color": "#faa732",
-          color: "#fff"
+          color: "black"
         })
         .on("click", function() {
           $(this)
             .text("- CHECK ANSWER -")
             .removeClass("btn-warning")
-            .addClass("btn-success")
+            .addClass("btn-secondary")
             .css({
               "font-weight": "bold",
               "border-color": "#51a351",
-              color: "#fff"
+              color: "black"
             })
             .on("click");
           nextQuestion();
@@ -429,7 +429,7 @@ jQuery(document).ready(function($) {
         submit = false;
         $("#submitbutton")
           .css({
-            color: "#fff",
+            color: "black",
             cursor: "pointer"
           })
           .on("click", function() {
@@ -526,12 +526,12 @@ jQuery(document).ready(function($) {
 
       //add submit button
       $(document.createElement("div"))
-        .addClass("btn-success choice-box")
+        .addClass("btn-secondary choice-box")
         .attr("id", "submitbutton")
         .text("- CHECK ANSWER -")
         .css({
           "font-weight": "bold",
-          color: "#fff",
+          color: "black",
           padding: "30px 0",
           "border-radius": "10px"
         })
